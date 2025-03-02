@@ -37,11 +37,11 @@
   }
 
   &.connected {
-    background: var(--Blue-800);
-    color: var(--Blue-500);
+    background: white;
+    color: hsl(240, 5%, 64.9%);
 
     &:hover {
-      border: 1px solid var(--Blue-500);
+      border: 1px solid hsl(240, 5%, 64.9%);
     }
   }
 }
@@ -98,7 +98,7 @@
   }
 
   &:not(.connected) {
-    background-color: var(--Blue-500);
+    background-color: white;
     color: var(--Neutral-5);
   }
 }
@@ -137,7 +137,7 @@
 
     .text-indicator {
       font-size: 11px;
-      color: var(--Blue-500);
+      color: white;
       user-select: none;
     }
 

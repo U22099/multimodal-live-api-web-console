@@ -25,8 +25,6 @@ import "./side-panel.scss";
 
 const filterOptions = [
   { value: "conversations", label: "Conversations" },
-  { value: "tools", label: "Tool Use" },
-  { value: "none", label: "All" },
 ];
 
 export default function SidePanel() {
@@ -40,7 +38,7 @@ export default function SidePanel() {
   const [selectedOption, setSelectedOption] = useState<{
     value: string;
     label: string;
-  } | null>(null);
+  } | null>({ value: "conversations", label: "Conversations" });
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
   //scroll the log to the bottom when new logs come in
@@ -116,8 +114,8 @@ export default function SidePanel() {
         />
         <div className={cn("streaming-indicator", { connected })}>
           {connected
-            ? `🔵${open ? " Streaming" : ""}`
-            : `⏸️${open ? " Paused" : ""}`}
+            ? `${open ? " Streaming" : ""}`
+            : `${open ? " Paused" : ""}`}
         </div>
       </section>
       <div className="side-panel-container" ref={loggerRef}>
